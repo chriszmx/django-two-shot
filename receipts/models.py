@@ -10,6 +10,9 @@ class ExpenseCategory(models.Model):
                               on_delete=models.CASCADE,
                               related_name='categories')
 
+    def __str__(self):
+        return self.name
+
 
 class Account(models.Model):
     name = models.CharField(max_length=100)
