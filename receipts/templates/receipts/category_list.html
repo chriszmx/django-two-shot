@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Expense Categories</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Number of receipts</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-        {% for expense in receipts.all %}
-            <td>{{ expense.name }}</td>
-            <td>{{ expense.receipts.all|length }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+    <h1>Expense Categories</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of receipts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for expense in receipts.all %}
+                    <td>{{ expense.name }}</td>
+                    <td>{{ expense.receipts.all|length }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Accounts</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Number</th>
-        <th>Number of receipts</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for account in receipts %}
-        <tr>
-            <td>{{ account.name }}</td>
-            <td>{{ account.number }}</td>
-            <td>{{ account.receipts.all|length }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+    <h1>Accounts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Number of receipts</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in receipts %}
+                <tr>
+                    <td>{{ account.name }}</td>
+                    <td>{{ account.number }}</td>
+                    <td>{{ account.receipts.all|length }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
