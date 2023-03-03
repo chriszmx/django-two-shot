@@ -14,13 +14,6 @@ class ExpenseCategory(models.Model):
         return self.name
 
 
-class Account(models.Model):
-    name = models.CharField(max_length=100)
-    number = models.CharField(max_length=20)
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL,
-                              on_delete=models.CASCADE,
-                              related_name='accounts')
-
 
 # class Receipt(models.Model):
 #     vendor = models.CharField(max_length=200)
